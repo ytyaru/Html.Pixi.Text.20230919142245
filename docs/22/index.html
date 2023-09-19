@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta name="description" content="">
+<meta name="author" content="ytyaru">
+<link rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja">
+<link rel="icon" href="asset/image/avator.png">
+<link rel="stylesheet" href="css/style.css">
+<!--<link rel="stylesheet" href="lib/highlight/11.8.0/styles/a11y-light.min.css">-->
+<link rel="stylesheet" href="lib/highlight/11.8.0/styles/a11y-dark.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="lib/highlight/11.8.0/min.js"></script>
+<script src="lib/highlight/11.8.0/languages/markdown.min.js"></script>
+<script src="lib/highlight/11.8.0/languages/javascript.min.js"></script>
+<script src="lib/highlight/11.8.0/languages/css.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.2.0/browser/pixi.min.js"></script>-->
+<script src="lib/marked/5.1.2/min.js"></script>
+<!--<script src="lib/robust-predicates/predicates.min.js"></script>-->
+<script src="lib/robust-predicates/orient2d.min.js"></script>
+<script src="lib/mapbox/delaunator.js"></script>
+<script src="lib/mapbox/earcut.js"></script>
+<script src="lib/gsap/3.12.2/PixiPlugin.min.js"></script>
+<script src="lib/gsap/3.12.2/min.js"></script>
+<script src="lib/pixi/7.2.4/min.js"></script>
+<script src="lib/opencv/4.x/min.js"></script>
+<script src="js/image-loader.js"></script>
+<script src="js/vertex.js"></script>
+<script src="js/main.js"></script>
+</head>
+<body>
+    <canvas id="my-canvas"></canvas>
+    <canvas id="canvas-mask"></canvas>
+    <canvas id="canvas-input" style="border: 1px solid black;"></canvas>
+    <details><summary>Live2D風アニメをラズパイで実現したい</summary><div id="md"></div></details>
+    <footer>
+        <span>© 2023 ytyaru</span>
+        <a title="CC-BY-SA" \
+           href="https://creativecommons.org/licenses/by-sa/4.0/deed.ja"
+           style="text-decoration: none;">
+            <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/a/a3/Cc.logo.circle.svg"></img>
+            <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Cc-by_new.svg"></img>
+            <img class="icon" src="https://upload.wikimedia.org/wikipedia/commons/2/29/Cc-sa.svg"></img>
+            <!--<img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/CC-BY-SA_icon.svg"></img>-->
+    </a></footer>
+<!--
+    <canvas id="my-canvas"></canvas>
+    <p>PNG画像から透明でない部分の形をパスとして自動取得したい。パスの頂点データを生成したい。PIXI.SimpleMeshをPNGから自動生成したい。</p>
+    <p><a href="https://www.rccm.co.jp/icem/pukiwiki/index.php?%E3%83%A1%E3%83%83%E3%82%B7%E3%83%A5%E7%94%9F%E6%88%90%E6%8A%80%E8%A1%93">メッシュ生成技術</a>参照。<a href="https://www.rccm.co.jp/icem/pukiwiki/index.php?%E3%83%A1%E3%83%83%E3%82%B7%E3%83%A5%E7%94%9F%E6%88%90%E3%83%BB%E6%93%8D%E4%BD%9C%E2%80%95Tips">メッシュ生成</a>のようにアルゴリズムがある。Delaunay三角形分割《ドローネ》というらしい。
+    </p>
+    <ul>
+        <li><a href="https://github.com/d3/d3-delaunay">d3/d3-delaunay</a>
+        <li><a href="https://github.com/mapbox/delaunator">mapbox/delaunator</a>
+    </ul>
+    <p>ほかにもEarcut三角形分割というアルゴリズムがあるようだ。<a href="https://note.com/zak5/n/n1b5613b282c1">mapboxのearcutライブラリとd3のd3-delaunayライブラリでポリゴンの三角形分割を見比べてみた</a>。ライブラリは→<a href="https://github.com/mapbox/earcut">mapbox/earcut</a></p>
+    <p>これらを<a href="https://pixijs.download/dev/docs/PIXI.SimpleMesh.html">PIXI.SimpleMesh</a>コンストラクタの引数にしたい。</p>
+    -->
+</body>
+</html>
+<!-- https://coliss.com/articles/build-websites/operation/work/html-template-for-web-apps-or-sites.html -->
+<!-- https://coliss.com/articles/build-websites/operation/work/html5-template-for-2018.html -->
