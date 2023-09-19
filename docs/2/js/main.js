@@ -9,15 +9,14 @@ window.addEventListener('DOMContentLoaded', async(event) => {
         backgroundColor: 0xafeeee,
     });
     const sentence = 'Hello pixi.js !!\nこんにちはPixiJS！\nテキストをクリックしてね。\n１字ずつ表示されるよ。'
-    const style = {fontFamily:'IPAexゴシック', fontSize:24, fill:0xFF0000, align:'center', stroke:'#FFFF00', strokeThickness:4}
+    const style = {fontFamily:'IPAexゴシック', fontSize:24, fill:0xFF0000, align:'center', stroke:'#FFFF00'}
     // https://pixijs.download/dev/docs/PIXI.Text.html
     // https://pixijs.download/dev/docs/PIXI.ITextStyle.html
     const text = new PIXI.Text('', style)
     //app.stage.addChild(text);
 
-    //app.ticker.maxFPS = 15;
     let count = -1
-    app.ticker.add((delta)=>{// delta:前Frameからの経過時間(1/60s) https://qiita.com/nanohanabuttobasu/items/94de586d06445a03a6bb
+    app.ticker.add((delta)=>{
         if (count < sentence.Graphemes.length-1) { count += 1 }
         else { return }
         text.text = text.text + sentence[count]
