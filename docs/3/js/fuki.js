@@ -17,6 +17,7 @@ class Fuki extends PIXI.Text {
         console.log(this.text, this._allText, '-----------------')
     }
     talk(delta) { // app.ticker.add((delta)=>{}) 前フレームからの経過時間（60FPS(1/60s)を1としたときの比） https://qiita.com/geregeregere/items/832b263cca7fc1659e6b#%E3%82%B3%E3%83%BC%E3%83%AB%E3%83%90%E3%83%83%E3%82%AF%E9%96%A2%E6%95%B0%E3%81%AB%E6%B8%A1%E3%81%95%E3%82%8C%E3%82%8Bdelta
+        //this.ms += delta * (1/60)
         this.delta += delta
         if (this.delta < this.fps) { return }
         this.delta -= this.fps
