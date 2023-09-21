@@ -103,11 +103,17 @@ class TalkBalloon extends PIXI.Graphics {
         this._width = 0
         this._height = 0
         this._tipWidth = 100 // 先端の長さ
-        this._appearWidth = 0
+        this._appearWidth = -1
     }
     appear() {
-        //if (this._appearWidth < this._width) { this._appearWidth += 1 }
-        if (this._appearWidth < this._width) { this._appearWidth += this._radius }
+        if (this._width + this._tipWidth <= this._appearWidth) { return true }
+        this.clear()
+        //if (this._appearWidth < this._width + this._tipWidth) { this._appearWidth += 1 }
+        //if (this._appearWidth < this._width + this._tipWidth) { this._appearWidth += this._radius }
+        if (this._appearWidth < this._width + this._tipWidth) {
+            this._appearWidth += this._radius
+            if (this._width + this._tipWidth < this._appearWidth) { this._appearWidth = this._width + this._tipWidth }
+        }
         //console.log(this._appearWidth)
         // 先端
         this.beginFill(0x22aa22, 0.3);
@@ -122,7 +128,8 @@ class TalkBalloon extends PIXI.Graphics {
             (this._appearWidth - this._tipWidth) + (this._lineWidth * 2) + (this._radius / 2), 
             this._height + (this._lineWidth * 2) + (this._radius / 2), this._radius);
         this.endFill();
-        if (this._appearWidth <= this._tipWidth) { return true }
+        //if (this._appearWidth <= this._tipWidth) { return true }
+        if (this._width + this._tipWidth <= this._appearWidth) { return true }
     }
     /*
     appear() {

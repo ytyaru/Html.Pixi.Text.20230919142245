@@ -8,15 +8,14 @@ window.addEventListener('DOMContentLoaded', async(event) => {
         autoResize: true,
         backgroundColor: 0xafeeee,
     });
-    console.log('aaaaaaaaaaaaaaa')
     const text = 'Hello pixi.js !!\nこんにちはPixiJS！\n吹き出しです。\nテキストをクリックしてね。\n１字ずつ表示されるよ。'
     const talkBox = new TalkBox(text)
-    const bg = new Background(app.width, app.height, app.backgroundColor)
+    //const bg = new Background(app.width, app.height, app.backgroundColor)
     app.ticker.add((delta)=>{
-        bg.draw()
+        //bg.draw()
         talkBox.draw(delta)
     });
-    app.stage.addChild(bg)
+    //app.stage.addChild(bg)
     app.stage.addChild(talkBox)
 });
 window.addEventListener('beforeunload', async(event) => {
